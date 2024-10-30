@@ -12,7 +12,7 @@ interface CardProps {
 function Card({ 
   title = "Acadia National Park",
   description = "Journeys that can't be beat",
-  image = "/images/card-1.jpg",
+  image = "/card-1.webp",
 }: CardProps) {
   return (
     <div

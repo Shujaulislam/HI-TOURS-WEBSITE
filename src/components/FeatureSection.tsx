@@ -23,7 +23,7 @@ export default function FeatureSection() {
   ]
 
   return (
-    <section className="bg-white py-20 px-4 md:px-20">
+    <section className="bg-white mt-10 py-20 px-4 md:px-20">
       <div className="max-w-7xl mx-auto relative">
         {/* Orange connecting line - set to lower z-index */}
         <div className="absolute top-[25%] left-0 right-0 hidden md:block ">

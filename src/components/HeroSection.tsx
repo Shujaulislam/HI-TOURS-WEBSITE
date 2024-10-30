@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 export default function HeroSection() {
   return (
-    <main className="relative bg-white"
-    style={{ background: 'url(/petra-background.webp) no-repeat center center' }}>
+    <main className="relative bg-white bg-cover"
+    style={{ background: 'url(/petra-background.jpg) no-repeat center' }}>
       {/* Hero Section */}
       {/* width + height + opacity lessen  */}
       <section className="relative h-screen"> 
@@ -112,6 +112,7 @@ export default function HeroSection() {
           </svg>
         </button>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-white"></div>
     </main>
   )
 }

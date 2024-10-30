@@ -1,13 +1,41 @@
 import { ChevronRight } from 'lucide-react';
-import Card from './Card';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default function DestinationsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const destinations = [
+    {
+      title: "ACADIA\nNATIONAL\nPARK",
+      image: "/card-1.webp"
+    },
+    {
+      title: "YELLOWSTONE\nNATIONAL\nPARK",
+      image: "/card-2.webp"
+    },
+    {
+      title: "GRAND\nCANYON\nPARK",
+      image: "/card-1.webp"
+    },
+  ];
+
+  const handleNextCard = () => {
+    setCurrentIndex((prev) => (prev + 1) % destinations.length);
+  };
+
   return (
     <section className="py-20 px-4 md:px-16 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-[1fr,1fr] gap-16">
         {/* Left Content */}
-        <div className="space-y-12">
+        <div className="space-y-12 mr-12">
           <div className="space-y-8">
             {/* Number and Title with Shadow */}
             <div className="relative">
@@ -55,29 +83,49 @@ export default function DestinationsSection() {
         </div>
 
         {/* Right Content - Cards */}
-        <div className="relative">
-          <div className="flex gap-8 overflow-hidden">
-            <Card
-              title="ACADIA NATIONAL PARK"
-              description="Journeys that can't be beat"
-              image="/placeholder.svg?height=600&width=450"
-              className="rounded-[2rem] overflow-hidden"
-              titleClassName="text-white text-3xl font-bold tracking-wider drop-shadow-lg"
-            />
-            <Card
-              title="ACADIA NATIONAL PARK"
-              description="Journeys that can't be beat"
-              image="/placeholder.svg?height=600&width=450"
-              className="rounded-[2rem] overflow-hidden"
-              titleClassName="text-white text-3xl font-bold tracking-wider drop-shadow-lg"
-            />
-          </div>
-
-          {/* Navigation Arrow */}
-          <button className="absolute -right-12 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-800 hover:bg-white/90 transition-colors shadow-lg">
-            <ChevronRight className="w-6 h-6" />
-          </button>
-        </div>
+        <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        modules={[EffectCoverflow, Pagination]}
+        className="w-full py-12 rounded-3xl *:rounded-3xl ml-12"
+      >
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </SwiperSlide>
+        <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
+          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </SwiperSlide>
+      </Swiper>
       </div>
     </section>
   );
