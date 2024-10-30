@@ -33,7 +33,7 @@ export default function TravelSection() {
         style={{
           background: 'url(/airplane.jpg) no-repeat center center',
           backgroundSize: 'cover',
-          clipPath: 'polygon(0 0, 100% 0, 100% 50%, 80% 100%, 20% 100%)'
+          clipPath: 'polygon(0 0, 100% 0, 100% 50%, 50% 100%, 50% 100%, 0 50%)'
         }}
       >
 
@@ -62,6 +62,12 @@ export default function TravelSection() {
                 
                 <div className="mt-12">
                   <p className="text-gray-600 leading-relaxed">
+                    Lorem ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a gallery of type.
+                    Lorem ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a gallery of type.
                     Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a gallery of type.
