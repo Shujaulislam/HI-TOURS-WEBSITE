@@ -45,10 +45,10 @@ export default function MasonryGrid({ images }: MasonryGridProps) {
         'col-span-3 row-span-2'  // Witness History
       ],
       4: [
-        'col-span-3 row-span-2', // First image
-        'col-span-3 row-span-2', // Second image
-        'col-span-3 row-span-2', // Third image
-        'col-span-3 row-span-2'  // Fourth image
+        'col-span-3 row-span-2', // Family Vacations (top left)
+        'col-span-3 row-span-2', // Business Trips (top right)
+        'col-span-3 row-span-2', // Group Series (bottom left)
+        'col-span-3 row-span-2'  // Private Tour (bottom right)
       ],
       3: [
         'col-span-4 row-span-2', // First image
