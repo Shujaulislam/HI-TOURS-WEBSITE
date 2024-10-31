@@ -98,7 +98,7 @@ export default function HeroSection() {
               className="aspect-[3/4] rounded-3xl overflow-hidden relative group cursor-pointer"
             >
               <Image
-                src={`/hero/acadia.jpg`}
+                src={`/hero/Acadia.jpg`}
                 // src={`/acadia-${index + 1}.jpg`}
                 alt={title}
                 fill
