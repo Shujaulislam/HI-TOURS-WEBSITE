@@ -17,7 +17,7 @@ export default function Map() {
           {/* Left Side - Single Image */}
           <div className="h-auto -ml-12 relative">
             <Image
-              src="/map.png"
+              src="/map.webp"
               alt="Description of single image"
               layout="fill"
               objectFit="cover"

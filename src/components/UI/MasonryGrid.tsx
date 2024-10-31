@@ -39,10 +39,10 @@ export default function MasonryGrid({ images }: MasonryGridProps) {
     const layouts = {
       5: [
         'col-span-3 row-span-2', // Experience Wildlife
-        'col-span-3 row-span-3', // Chase Adventure
-        'col-span-2 row-span-2', // Find Opportunities
-        'col-span-4 row-span-2', // Live Culture
-        'col-span-3 row-span-2'  // Witness History
+        'col-span-2 row-span-3', // Chase Adventure
+        'col-span-1 row-span-3', // Find Opportunities
+        'col-span-3 row-span-4', // Live Culture
+        'col-span-3 row-span-3'  // Witness History
       ],
       4: [
         'col-span-3 row-span-2', // Family Vacations (top left)

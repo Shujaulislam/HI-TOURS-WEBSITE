@@ -2,6 +2,7 @@
 
 
 import DestinationSection from '@/components/DestinationSection'
+import { Example } from '@/components/Example'
 import ExperiencesSection from '@/components/ExperiencesSection'
 import FeaturesSection from '@/components/FeatureSection'
 import Footer from '@/components/Footer'
@@ -20,6 +21,7 @@ export default function Home() {
       <DestinationSection/>
       <ExperiencesSection/>
       <TravelSection/>
+      <Example/>
       <Map/>
       <Testimonials/>
       <Footer/>

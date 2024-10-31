@@ -2,40 +2,70 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import React from 'react'
 import MasonryGrid from '@/components/UI/MasonryGrid'
+import VideoGrid from './UI/VideoGrid'
 
 export default function ExperiencesSection() {
   const experiences = [
     {
       title: 'Experience Wildlife',
-      image: '/images/wildlife.jpg',
+      image: '/experience/wildlife.jpg',
       alt: 'Wildlife experience'
     },
     {
       title: 'Chase Adventure',
-      image: '/images/adventure.jpg',
+      image: '/experience/adventure.jpg',
       alt: 'Adventure experience'
     },
     {
       title: 'Find Opportunities',
-      image: '/images/opportunities.jpg',
+      image: '/experience/opportunities.png',
       alt: 'Opportunities'
     },
     {
       title: 'Live Culture',
-      image: '/images/culture.jpg',
+      image: '/experience/culture.jpg',
       alt: 'Cultural experience'
     },
     {
       title: 'Witness History',
-      image: '/images/history.jpg',
+      image: '/experience/history.jpg',
       alt: 'Historical monuments'
     }
-  ]
+  ];
+
+  const videos = [
+    {
+      title: 'Experience Wildlife',
+      video: '/experience/wildlife.mp4',
+      alt: 'Wildlife experience'
+    },
+    {
+      title: 'Chase Adventure',
+      video: '/experience/adventure.mp4',
+      alt: 'Adventure experience'
+    },
+    {
+      title: 'Find Opportunities',
+      video: '/experience/opportunities.mp4',
+      alt: 'Opportunities'
+    },
+    {
+      title: 'Live Culture',
+      video: '/experience/culture.mp4',
+      alt: 'Cultural experience'
+    },
+    {
+      title: 'Witness History',
+      video: '/experience/history.mp4',
+      alt: 'Historical monuments'
+    }
+  ];
+
 
   return (
-      <section className="relative min-h-screen bg-white overflow-hidden mt-96" 
-      style={{ background: 'url(/mountains.jpg) no-repeat center',
-        backgroundSize: 'contain',
+      <section className="relative min-h-screen bg-white overflow-hidden mt-96 border-black border-2" 
+      style={{ background: 'url(/mountains.jpg) no-repeat center cover',
+        backgroundSize: 'cover',
       }}>
         {/* Background Mountain Image - Adjusted to be more prominent */}
         {/* <div className="absolute inset-0 z-0">
@@ -50,15 +80,16 @@ export default function ExperiencesSection() {
         </div> */}
 
         {/* Content - Adjusted max width and padding */}
-        <div className="relative z-10 max-w-[1800px] mx-auto px-8 py-20 md:px-20">
+        <div className="relative z-10 max-w-[1800px] mx-auto px-8 py-20 md:px-20 border">
           <div className="grid md:grid-cols-[1.3fr,1fr] gap-24">
             {/* Left Side - Masonry Grid */}
-            <div className="h-[800px] -ml-12">
-              <MasonryGrid images={experiences} />
+            <div className="h-[800px] -ml-12 border">
+              {/* <MasonryGrid images={experiences} /> */}
+              <VideoGrid videos={videos} />
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-8 pt-12 ml-8">
+            <div className="space-y-8 pt-12 ml-8 border">
               <div className="relative">
                 <span className="text-[140px] font-serif leading-none text-[#F8C1B7]">
                   02.

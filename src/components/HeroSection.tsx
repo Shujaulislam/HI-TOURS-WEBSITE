@@ -8,13 +8,13 @@ import Link from 'next/link'
 export default function HeroSection() {
   return (
     <main className="relative bg-white bg-cover"
-    style={{ background: 'url(/petra-background.jpg) no-repeat center' }}>
+      style={{ background: 'url(/petra-background.jpg) no-repeat center' }}>
       {/* Hero Section */}
       {/* width + height + opacity lessen  */}
-      <section className="relative h-screen"> 
-                {/* style={{ background: 'url(/petra-background.webp) no-repeat center center' }}> */}
+      <section className="relative h-screen">
+        {/* style={{ background: 'url(/petra-background.webp) no-repeat center center' }}> */}
         {/* Remove the black overlay to match image */}
-        
+
         {/* Updated NavBar */}
         <div className="absolute top-0 left-0 right-0 z-10 px-12 py-8 flex justify-between items-center">
           <div className="text-2xl">
@@ -30,19 +30,19 @@ export default function HeroSection() {
         </div>
 
         {/* Social Media Icons */}
-      <div className="absolute left-8 top-1/3 flex flex-col space-y-6 text-white z-10">
-        <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaFacebookF className="w-4 h-4" /></button>
-        <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaTwitter className="w-4 h-4" /></button>
-        <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaInstagram className="w-4 h-4" /></button>
-        <p className="text-xs transform -rotate-90 mt-6">Follow us on</p>
-      </div>
+        <div className="absolute left-8 top-1/3 flex flex-col space-y-6 text-white z-10">
+          <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaFacebookF className="w-4 h-4" /></button>
+          <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaTwitter className="w-4 h-4" /></button>
+          <button onClick={() => window.open('https://example.com/', '_blank', 'noopener,noreferrer')}><FaInstagram className="w-4 h-4" /></button>
+          <p className="text-xs transform -rotate-90 mt-6">Follow us on</p>
+        </div>
 
         {/* Updated Hero Content */}
         <div className="absolute right-12 top-1/2 -translate-y-1/2 max-w-lg text-right">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-24 border-t-2 border-white" />
-          <p className="text-sm uppercase tracking-widest text-white font-light">New Age Destination Management</p>
-        </div>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-24 border-t-2 border-white" />
+            <p className="text-sm uppercase tracking-widest text-white font-light">New Age Destination Management</p>
+          </div>
           <h1 className="text-7xl font-light text-white" style={{ fontFamily: 'serif' }}>
             Take the<br />world for<br />a ride
           </h1>
@@ -51,17 +51,16 @@ export default function HeroSection() {
 
       {/* Updated Journey Section */}
       <section className="relative flex flex-row py-24 px-12">
-        <div className="w-1/4 mr-5 p-10">
-        <div>
+
+        <div className='flex items-center'>
+          <div className='w-1/3 '>
             <div className="w-16 border-t-4 border-white mb-6"></div>
-              <h2 className="text-6xl font-light mb-6">Journeys that can't be beat</h2>
-            </div>
-          <p className="text-gray-100">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
-          
-          <div className="flex items-center gap-4 mt-4">
+            <h2 className="text-5xl font-light mb-6">Journeys that can't be beat</h2>
+            <p className="text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div className="flex items-center gap-4 mt-4">
               {/* Bookmark Icon */}
               <motion.button
                 className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center"
@@ -78,17 +77,18 @@ export default function HeroSection() {
                 Know More
               </button>
             </div>
-        </div>
+          </div>
 
-        {/* Updated Cards */}
-        <div className="mt-12 grid grid-cols-4 gap-6 w-3/4 pt-12">
+
+          <div className="mt-12 grid grid-cols-4 gap-6 w-3/4 pt-12">
           {["Acadia National Park", "Blog Titles", "Acadia National Park", "Acadia National Park"].map((title, index) => (
             <div
               key={index}
               className="aspect-[3/4] rounded-3xl overflow-hidden relative group cursor-pointer"
             >
-              <Image 
-                src={`/images/card-${index + 1}.jpg`} 
+              <Image
+                src={`/hero/acadia.jpg`}
+                // src={`/acadia-${index + 1}.jpg`}
                 alt={title}
                 fill
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
@@ -102,6 +102,15 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
+
+        </div>
+
+
+
+
+
+        {/* Updated Cards */}
+       
       </section>
 
       {/* Contact Button */}

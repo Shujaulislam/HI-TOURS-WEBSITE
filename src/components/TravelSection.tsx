@@ -1,40 +1,55 @@
+'use client'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 
+
 export default function TravelSection() {
-  const travelStyles = [
-    {
-      title: 'FAMILY VACATIONS',
-      image: '/family.jpg',
-      alt: 'Family on beach'
-    },
-    {
-      title: 'BUSINESS TRIPS',
-      image: '/business.jpg',
-      alt: 'Business meeting'
-    },
-    {
-      title: 'GROUP SERIES',
-      image: '/group.jpg',
-      alt: 'Group hiking'
-    },
-    {
-      title: 'PRIVATE TOUR',
-      image: '/private.jpg',
-      alt: 'Private tour'
-    }
-  ];
+    const travelCards = [
+        {
+          title: 'Family Vacations',
+          image: '/placeholder.svg?height=300&width=300',
+          alt: 'Family running on beach'
+        },
+        {
+          title: 'Business Trips',
+          image: '/placeholder.svg?height=300&width=300',
+          alt: 'Business people in discussion'
+        },
+        {
+          title: 'Group Series',
+          image: '/placeholder.svg?height=300&width=300',
+          alt: 'Hiker on mountain peak'
+        },
+        {
+          title: 'Private Tour',
+          image: '/logo.webp',
+          alt: 'Couple at sunset'
+        }
+      ]
 
   return (
-    <section className="relative min-h-screen w-full bg-white">
+    <section className="bg-black z-10 min-h-screen w-full"
+    style={{
+        // (0 0): Top-left corner
+        // (100% 0): Top-right corner 
+        // (100% 75%): Right side, 3/4 down
+        // (28% 100%): Middle left bottom point
+        // (50% 100%): Middle righ bottom point
+        // (50% 100%): Same middle bottom point (duplicated)
+        // (0 75%): Left side, 3/4 down
+        clipPath: 'polygon(0 0, 100% 0, 100% 75%, 28% 100%, 75% 100%, 0 75%)',
+
+    }}>
       {/* Custom polygon Shape */}
       <div 
         className="static top-0 left-0 right-0 -mb-24 w-full h-[1200px]"
         style={{
+            // backgroundColor: '#F8C1B7',
           background: 'url(/airplane.jpg) no-repeat center center',
-          backgroundSize: 'cover',
-          clipPath: 'polygon(0 0, 100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%)'
+        //   backgroundSize: 'cover',
+        //   clipPath: 'polygon(0 0, 100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%)',
+        //   border: '2px solid #000' // Added border to make shape visible
         }}
       >
         {/* Content Container */}
@@ -99,13 +114,18 @@ export default function TravelSection() {
                 </div>
 
                 {/* Travel Styles Grid */}
+                
                 <div className="col-span-7">
-                  <div className="grid grid-cols-2 gap-6 relative">
-                    {travelStyles.map((style, index) => (
+                  <div className="grid grid-cols-12 gap-6 relative">
+                    {travelCards.map((style, index) => (
                       <div 
                         key={index}
                         className={`relative aspect-[1.2/1] rounded-3xl overflow-hidden shadow-lg
-                          ${index >= 2 ? '-mt-12' : ''}`} // Adds negative margin to bottom row
+                          ${index === 0 ? 'col-span-7' : ''}
+                          ${index === 1 ? 'col-span-5' : ''}
+                          ${index === 2 ? 'col-span-5 ml-8' : ''}
+                          ${index === 3 ? 'col-span-7' : ''}
+                          ${index >= 2 ? '-mt-12' : ''}`}
                       >
                         <Image
                           src={style.image}
@@ -129,61 +149,6 @@ export default function TravelSection() {
           </div>
         </div>
       </div>
-
-      {/* text div */}
-        <div 
-            className="static inline-block left-0 -mt-96 w-1/2 h-[1000px]"
-            style={{
-            background: '#D85827', // Orange color
-            clipPath: 'polygon(0 0, 100% 30%, 100% 70%, 0 100%)',
-            // Point A: 0 0       (top-left)
-            // Point B: 100% 30%  (top-right, angled down)
-            // Point C: 100% 70%  (bottom-right)
-            // Point D: 0 100%    (bottom-left)
-            top: '38rem'
-            }}
-        >
-            <div className="container mx-auto px-20 pt-32">
-            <div className="flex items-baseline gap-4">
-                <span 
-                className="text-[130px] font-light leading-none text-[#fe8560] font-serif"
-                style={{ opacity: 0.8 }}
-                >
-                04.
-                </span>
-                <div className="w-28 h-1 bg-white"></div>
-            </div>
-            <div className="mt-8 max-w-md">
-            {/* <div className="w-28 h-1 bg-white"></div> */}
-                <h2 className="text-right text-white text-6xl font-light leading-tight">
-                Journeys
-                <br />
-                that
-                <br />
-                can't be
-                <br />
-                <span className="font-normal text-black">beat.</span>
-                </h2>
-            </div>
-            </div>
-        </div>
-     
-        {/* video player */}
-        <div
-            className='static inline-block -mt-96 w-1/2 h-[800px]' 
-            style={{
-            background: '#FF6800', // Orange color
-            clipPath: 'polygon(8% 70%, 100% 35%, 100% 60%, 8% 96%)',
-            // Point A: 0 0       (top-left)
-            // Point B: 100% 30%  (top-right, angled down)
-            // Point C: 100% 70%  (bottom-right)
-            // Point D: 0 100%    (bottom-left)
-            top: '38rem'
-            }}
-        >
-        <Image src="/video.jpg" alt="video" fill className="object-cover" />
-        </div>
-
     </section>
   )
 }
