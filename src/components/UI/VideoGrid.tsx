@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from 'framer-motion'
 import React from 'react'
 
@@ -19,7 +21,6 @@ const GridItem: React.FC<{ video: GridVideo; className?: string }> = ({ video, c
   >
     <video
       src={video.video}
-      // alt={video.alt}
       className="absolute w-full h-full object-cover"
       autoPlay
       muted
@@ -34,11 +35,11 @@ const GridItem: React.FC<{ video: GridVideo; className?: string }> = ({ video, c
   </motion.div>
 )
 
-export default function VideoGrid({ videos }: VideoGridProps) {
+const VideoGrid: React.FC<VideoGridProps> = ({ videos }) => {
   // Dynamic class assignments based on number of videos
-  const getGridClasses = (index: number, total: number) => {
+  const getGridClasses = (index: number, total: number): string => {
     // Default classes for different layouts
-    const layouts = {
+    const layouts: Record<number, string[]> = {
       5: [
         'col-span-3 row-span-2', // Experience Wildlife
         'col-span-2 row-span-3', // Chase Adventure
@@ -67,7 +68,7 @@ export default function VideoGrid({ videos }: VideoGridProps) {
     }
 
     // Get the appropriate layout based on total videos
-    const layoutArray = layouts[total as keyof typeof layouts] || layouts[5]
+    const layoutArray = layouts[total] || layouts[5]
     return layoutArray[index] || 'col-span-3 row-span-2'
   }
 
@@ -84,39 +85,4 @@ export default function VideoGrid({ videos }: VideoGridProps) {
   )
 }
 
-// Example usage:
-export function ExampleUsage() {
-  const videos = [
-    {
-      title: 'Experience Wildlife',
-      video: '/videos/wildlife.mp4',
-      alt: 'Wildlife experience'
-    },
-    {
-      title: 'Chase Adventure',
-      video: '/videos/adventure.mp4',
-      alt: 'Hot air balloons'
-    },
-    {
-      title: 'Find Opportunities',
-      video: '/videos/opportunities.mp4',
-      alt: 'Business meeting'
-    },
-    {
-      title: 'Live Culture',
-      video: '/videos/culture.mp4',
-      alt: 'Cultural experience'
-    },
-    {
-      title: 'Witness History',
-      video: '/videos/history.mp4',
-      alt: 'Historical monument'
-    }
-  ]
-
-  return (
-    <div className="max-w-4xl mx-auto p-4">
-      <VideoGrid videos={videos} />
-    </div>
-  )
-}
+export default VideoGrid

@@ -1,37 +1,38 @@
-import Image from 'next/image'
+"use client"
+// import Image from 'next/image'
 import { motion } from 'framer-motion'
 import React from 'react'
-import MasonryGrid from '@/components/UI/MasonryGrid'
+// import MasonryGrid from '@/components/UI/MasonryGrid'
 import VideoGrid from './UI/VideoGrid'
 
 export default function ExperiencesSection() {
-  const experiences = [
-    {
-      title: 'Experience Wildlife',
-      image: '/experience/wildlife.jpg',
-      alt: 'Wildlife experience'
-    },
-    {
-      title: 'Chase Adventure',
-      image: '/experience/adventure.jpg',
-      alt: 'Adventure experience'
-    },
-    {
-      title: 'Find Opportunities',
-      image: '/experience/opportunities.png',
-      alt: 'Opportunities'
-    },
-    {
-      title: 'Live Culture',
-      image: '/experience/culture.jpg',
-      alt: 'Cultural experience'
-    },
-    {
-      title: 'Witness History',
-      image: '/experience/history.jpg',
-      alt: 'Historical monuments'
-    }
-  ];
+  // const experiences = [
+  //   {
+  //     title: 'Experience Wildlife',
+  //     image: '/experience/wildlife.jpg',
+  //     alt: 'Wildlife experience'
+  //   },
+  //   {
+  //     title: 'Chase Adventure',
+  //     image: '/experience/adventure.jpg',
+  //     alt: 'Adventure experience'
+  //   },
+  //   {
+  //     title: 'Find Opportunities',
+  //     image: '/experience/opportunities.png',
+  //     alt: 'Opportunities'
+  //   },
+  //   {
+  //     title: 'Live Culture',
+  //     image: '/experience/culture.jpg',
+  //     alt: 'Cultural experience'
+  //   },
+  //   {
+  //     title: 'Witness History',
+  //     image: '/experience/history.jpg',
+  //     alt: 'Historical monuments'
+  //   }
+  // ];
 
   const videos = [
     {

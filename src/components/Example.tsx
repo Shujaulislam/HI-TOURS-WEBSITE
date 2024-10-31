@@ -1,6 +1,9 @@
+"use client"
+
 import { useAnimate } from "framer-motion";
 import React, { MouseEventHandler, ReactNode, useRef } from "react";
 import { FiMousePointer } from "react-icons/fi";
+import Image from "next/image";
 
 export const Example = () => {
   return (
@@ -8,22 +11,22 @@ export const Example = () => {
       renderImageBuffer={50}
       rotationRange={25}
       images={[
-        " /active/1.jpg",
-        " /active/2.jpg",
-        " /active/3.jpg",
-        " /active/4.jpg",
-        " /active/5.jpg",
-        " /active/6.jpg",
-        " /active/7.jpg",
-        " /active/8.jpg",
-        " /active/9.jpg",
-        " /active/10.jpg",
-        " /active/11.jpg",
-        " /active/12.jpg",
-        " /active/13.jpg",
-        " /active/14.jpg",
-        " /active/15.jpg",
-        " /active/16.jpg",
+        "/active/1.jpg",
+        "/active/2.jpg", 
+        "/active/3.jpg",
+        "/active/4.jpg",
+        "/active/5.jpg",
+        "/active/6.jpg",
+        "/active/7.jpg",
+        "/active/8.jpg",
+        "/active/9.jpg",
+        "/active/10.jpg",
+        "/active/11.jpg",
+        "/active/12.jpg",
+        "/active/13.jpg",
+        "/active/14.jpg",
+        "/active/15.jpg",
+        "/active/16.jpg",
       ]}
     >
       <section className="grid h-screen w-full place-content-center bg-white">
@@ -95,6 +98,8 @@ const MouseImageTrail = ({
 
     const el = document.querySelector(selector) as HTMLElement;
 
+    if (!el) return;
+
     el.style.top = `${lastRenderPosition.current.y}px`;
     el.style.left = `${lastRenderPosition.current.x}px`;
     el.style.zIndex = imageRenderCount.current.toString();
@@ -141,13 +146,19 @@ const MouseImageTrail = ({
       {children}
 
       {images.map((img, index) => (
-        <img
-          className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0"
-          src={img}
-          alt={`Mouse move image ${index}`}
+        <div
           key={index}
           data-mouse-move-index={index}
-        />
+          className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 opacity-0"
+        >
+          <Image
+            src={img}
+            alt={`Mouse move image ${index}`}
+            width={192}
+            height={192}
+            className="object-cover"
+          />
+        </div>
       ))}
     </div>
   );
