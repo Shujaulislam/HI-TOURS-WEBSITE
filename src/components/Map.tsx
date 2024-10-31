@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function Map() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-white to-purple-50 overflow-hidden">
+    <section className="relative min-h-screen bg-white overflow-hidden">
       {/* Content - Adjusted max width and padding */}
       <div className="relative z-10 max-w-[1800px] mx-auto px-8 py-20 md:px-20">
         <div className="grid md:grid-cols-[1.3fr,1fr] gap-24">
