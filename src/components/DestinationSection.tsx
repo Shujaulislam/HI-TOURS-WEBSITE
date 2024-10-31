@@ -11,9 +11,11 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
 export default function DestinationsSection() {
+  // {/* Swiper is stopping form generating correct height it stops till you interact with it  */}
 
 
   return (
+
     // <section className="py-20 px-4 md:px-16 max-w-7xl mx-auto">
     //   <div className="grid md:grid-cols-[1fr,1fr] gap-16">
     //     {/* Left Content */}
@@ -67,7 +69,7 @@ export default function DestinationsSection() {
     // </section>
 
     <>
-    <section className='w-[90%] mx-auto grid grid-cols-12 justify-center mt-24 gap-4'>
+    <section className='w-[90%] mx-auto grid grid-cols-12 justify-center mt-24 gap-4 border-black border-2'>
             <div className='col-span-2 border'>
                 <span className="text-[140px] font-serif leading-none text-[#F8C1B7]">
                     01.
