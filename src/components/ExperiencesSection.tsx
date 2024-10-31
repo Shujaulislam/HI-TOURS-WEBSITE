@@ -63,7 +63,7 @@ export default function ExperiencesSection() {
 
 
   return (
-      <section className="relative min-h-screen bg-white overflow-hidden mt-96 border-black border-2" 
+      <section className="relative min-h-screen bg-white overflow-hidden mt-96" 
       style={{ background: 'url(/mountains.jpg) no-repeat center cover',
         backgroundSize: 'cover',
       }}>

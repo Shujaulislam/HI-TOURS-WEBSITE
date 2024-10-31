@@ -3,25 +3,20 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const experiences = [
-  { id: 1, image: '/path/to/image1.jpg', title: 'Experience 1', alt: 'Description of image 1' },
-  { id: 2, image: '/path/to/image2.jpg', title: 'Experience 2', alt: 'Description of image 2' },
-]
 
 export default function Map() {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-white to-purple-50 overflow-hidden">
       {/* Content - Adjusted max width and padding */}
       <div className="relative z-10 max-w-[1800px] mx-auto px-8 py-20 md:px-20">
         <div className="grid md:grid-cols-[1.3fr,1fr] gap-24">
           {/* Left Side - Single Image */}
-          <div className="h-auto -ml-12 relative">
+          <div className="h-auto relative">
             <Image
               src="/map.webp"
               alt="Description of single image"
               layout="fill"
               objectFit="cover"
-              className="rounded-lg shadow-lg"
             />
           </div>
 
@@ -45,17 +40,19 @@ export default function Map() {
               </p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <motion.button
+            <div className="flex gap-4 mr-36 justify-end">
+              <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
+                Know More
+              </button>
+            <motion.button
                 className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <span className="text-white text-xl">+</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 7.5C8 6.67157 8.67157 6 9.5 6H14.5C15.3284 6 16 6.67157 16 7.5V17L11.5 14L7 17V7.5Z" fill="white" />
+                </svg>
               </motion.button>
-              <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
-                Know More
-              </button>
               </div>
           </div>
         </div>

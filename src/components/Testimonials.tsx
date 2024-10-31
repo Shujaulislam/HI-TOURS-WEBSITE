@@ -15,21 +15,21 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Sarah Johnson",
     role: "Travel Enthusiast",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/testimonial/avatar-female.png",
     review: "My experience with this travel agency was nothing short of amazing. The attention to detail in planning my trip was impeccable. Every destination, every activity, was carefully curated to match my preferences. I felt like I was on a personalized adventure crafted just for me."
   },
   {
     id: 2,
     name: "Michael Chen",
     role: "Adventure Seeker",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/testimonial/avatar-male-2.png",
     review: "As someone who loves off-the-beaten-path experiences, I was thoroughly impressed. They managed to find hidden gems that I wouldn't have discovered on my own. The local guides were knowledgeable and passionate, making each day an exciting new adventure."
   },
   {
     id: 3,
     name: "Emily Rodriguez",
     role: "Family Traveler",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/testimonial/avatar-male-1.png",
     review: "Traveling with kids can be challenging, but this agency made it a breeze. They thought of everything - from kid-friendly activities to accommodations that cater to families. It was a stress-free vacation that both the adults and children enjoyed immensely."
   }
 ]

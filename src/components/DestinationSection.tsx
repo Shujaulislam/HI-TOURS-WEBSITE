@@ -1,13 +1,14 @@
-import { ChevronRight } from 'lucide-react';
-import React, { useRef, useState } from 'react';
+"use client"
+
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 export default function DestinationsSection() {
 
@@ -64,7 +65,7 @@ export default function DestinationsSection() {
     //     </div>
     //   </div>
     // </section>
-    
+
     <>
     <section className='w-[90%] mx-auto grid grid-cols-12 justify-center mt-24 gap-4'>
             <div className='col-span-2 border'>
@@ -120,31 +121,31 @@ export default function DestinationsSection() {
         className="w-[80%] py-12 rounded-3xl *:rounded-3xl ml-12"
       >
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-1.jpg" alt="nature-1" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-2.jpg" alt="nature-2" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-3.jpg" alt="nature-3" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-4.jpg" alt="nature-4" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-5.jpg" alt="nature-5" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-6.jpg" alt="nature-6" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-7.jpg" alt="nature-7" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-8.jpg" alt="nature-8" />
         </SwiperSlide>
         <SwiperSlide className=' bg-center bg-cover w-[300px] h-[500px]'>
-          <img className='block w-full' src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          <Image className='block w-full' width={300} height={500} src="/swiper/nature-9.jpg" alt="nature-9" />
         </SwiperSlide>
        </Swiper>
         </div>

@@ -26,6 +26,28 @@ export default function TravelSection() {
           image: '/logo.webp',
           alt: 'Couple at sunset'
         }
+      ];
+    const travelVideos = [
+        {
+          title: 'Family Vacations',
+          video: '/travel/family.mp4',
+          alt: 'Family running on beach'
+        },
+        {
+          title: 'Business Trips',
+          video: '/travel/business.mp4',
+          alt: 'Business people in discussion'
+        },
+        {
+          title: 'Group Series',
+          video: '/travel/group.mp4',
+          alt: 'Hiker on mountain peak'
+        },
+        {
+          title: 'Private Tour',
+          video: '/travel/private.mp4',
+          alt: 'Couple at sunset'
+        }
       ]
 
   return (
@@ -106,46 +128,30 @@ export default function TravelSection() {
             </div>
 
             {/* Right Grid */}
-            <div className="col-span-8">
-              {/* Grid Section */}
-              <div className="grid grid-cols-12 gap-6 mt-10">
-                <div className="col-span-5">
-                  {/* Your existing left content */}
-                </div>
-
-                {/* Travel Styles Grid */}
-                
-                <div className="col-span-7">
-                  <div className="grid grid-cols-12 gap-6 relative">
-                    {travelCards.map((style, index) => (
-                      <div 
+             <div className="col-span-8 mt-10 grid grid-cols-2 gap-6">
+                {travelVideos.map((style, index) => (
+                    <div 
                         key={index}
-                        className={`relative aspect-[1.2/1] rounded-3xl overflow-hidden shadow-lg
-                          ${index === 0 ? 'col-span-7' : ''}
-                          ${index === 1 ? 'col-span-5' : ''}
-                          ${index === 2 ? 'col-span-5 ml-8' : ''}
-                          ${index === 3 ? 'col-span-7' : ''}
-                          ${index >= 2 ? '-mt-12' : ''}`}
-                      >
-                        <Image
-                          src={style.image}
-                          alt={style.alt}
-                          fill
-                          className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                          <div className="absolute bottom-6 left-6 text-white">
-                            <span className="uppercase text-sm tracking-[0.15em] font-medium">
-                              {style.title}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                        className={`relative aspect-[1.2/1] rounded-3xl overflow-hidden shadow-lg 
+                        ${index >= 2 ? 'translate-x-8' : ''}
+                                    `}
+                        >
+                            <video
+                                src={style.video}
+                                className="absolute w-full h-full object-cover"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+                                <span className="absolute bottom-6 left-6 text-white uppercase text-sm tracking-wide font-medium">
+                                    {style.title}
+                                </span>
+                            </div>
+                    </div>
+                ))}
             </div>
+
           </div>
         </div>
       </div>
