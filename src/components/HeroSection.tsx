@@ -16,9 +16,9 @@ export default function HeroSection() {
   
       <section className="relative min-h-screen">
         {/* NavBar with increased padding */}
-        <div className="absolute top-0 left-0 right-0 z-10 px-16 py-10 flex justify-between items-center">
+        <div className="absolute top-0 left-0 right-0 px-16 py-10 flex justify-between items-center">
           <div className="text-2xl">
-            <Image src="/logo.webp" alt="Hi Tours" width={150} height={100} className="h-8" />
+            <Image src="/logo.webp" alt="Hi Tours" width={100} height={100} className="h-8" />
           </div>
           <nav className="flex space-x-12 text-sm uppercase tracking-wider font-light">
             <Link className='text-white hover:text-gray-200' href="#about">About Us</Link>
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
         {/* Hero Content with adjusted spacing */}
         <div className="absolute right-16 top-1/2 -translate-y-1/2 max-w-xl text-right">
-          <div className="flex items-center gap-6 mb-8">
+          <div className="flex items-center gap-6">
             <div className="w-[200px] border-t-4 border-white" />
             <p className="text-2xl uppercase tracking-widest text-white font-light">
               New Age Destination Management
@@ -64,9 +64,9 @@ export default function HeroSection() {
       </section>
 
       {/* Journey Section with improved spacing */}
-      <section className="relative px-16 py-32">
+      <section className="relative px-16 pb-32">
         <div className='mb-24 flex items-center'>
-          <div className='w-1/3 '>
+          <div className='w-1/3 pr-10'>
             <div className="w-16 border-white mb-6"></div>
             <h2 className="text-gray-100 text-5xl font-light mb-6">Journeys that can't be beat</h2>
             <p className="text-gray-100">
@@ -86,13 +86,13 @@ export default function HeroSection() {
               </motion.button>
 
               {/* Know More Button */}
-              <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
+              <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-white hover:bg-gray-50 hover:text-gray-700 transition-colors uppercase tracking-wider">
               Know More
               </button>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-4 gap-6 w-3/4 pt-12">
+          <div className="mt-48 grid grid-cols-4 gap-6 w-3/4 pt-12">
             {["Acadia National Park", "Blog Titles", "Acadia National Park", "Acadia National Park"].map((title, index) => (
             <div
               key={index}
@@ -117,7 +117,7 @@ export default function HeroSection() {
       </section>
 
       {/* Contact Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-8 right-8">
         <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full p-4">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

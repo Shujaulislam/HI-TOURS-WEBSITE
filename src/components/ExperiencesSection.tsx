@@ -64,7 +64,7 @@ export default function ExperiencesSection() {
 
 
   return (
-      <section className="relative min-h-screen bg-white overflow-hidden mt-96" 
+      <section className="relative min-h-screen bg-white mt-24 px-24" 
       style={{ background: 'url(/mountains.jpg) no-repeat center cover',
         backgroundSize: 'cover',
       }}>
@@ -81,16 +81,16 @@ export default function ExperiencesSection() {
         </div> */}
 
         {/* Content - Adjusted max width and padding */}
-        <div className="relative z-10 max-w-[1800px] mx-auto px-8 py-20 md:px-20 border">
+        <div className="relative z-10 max-w-[1800px] mx-auto px-8 md:px-20">
           <div className="grid md:grid-cols-[1.3fr,1fr] gap-24">
             {/* Left Side - Masonry Grid */}
-            <div className="h-[800px] -ml-12 border">
+            <div className="h-[800px] -ml-12">
               {/* <MasonryGrid images={experiences} /> */}
               <VideoGrid videos={videos} />
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-8 pt-12 ml-8 border">
+            <div className="space-y-8 pt-12 ml-8">
               <div className="relative">
                 <span className="text-[140px] font-serif leading-none text-[#F8C1B7]">
                   02.
@@ -125,7 +125,7 @@ export default function ExperiencesSection() {
                 </motion.button>
 
                 {/* Know More Button */}
-                <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
+                <button className="px-6 py-2 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
                   Know More
                 </button>
               </div>

@@ -1,32 +1,10 @@
 'use client'
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 
 
 export default function TravelSection() {
-    const travelCards = [
-        {
-          title: 'Family Vacations',
-          image: '/placeholder.svg?height=300&width=300',
-          alt: 'Family running on beach'
-        },
-        {
-          title: 'Business Trips',
-          image: '/placeholder.svg?height=300&width=300',
-          alt: 'Business people in discussion'
-        },
-        {
-          title: 'Group Series',
-          image: '/placeholder.svg?height=300&width=300',
-          alt: 'Hiker on mountain peak'
-        },
-        {
-          title: 'Private Tour',
-          image: '/logo.webp',
-          alt: 'Couple at sunset'
-        }
-      ];
+
     const travelVideos = [
         {
           title: 'Family Vacations',
@@ -51,34 +29,17 @@ export default function TravelSection() {
       ]
 
   return (
-    <section className="bg-black z-10 min-h-screen w-full"
-    style={{
-        // (0 0): Top-left corner
-        // (100% 0): Top-right corner 
-        // (100% 75%): Right side, 3/4 down
-        // (28% 100%): Middle left bottom point
-        // (50% 100%): Middle righ bottom point
-        // (50% 100%): Same middle bottom point (duplicated)
-        // (0 75%): Left side, 3/4 down
-        clipPath: 'polygon(0 0, 100% 0, 100% 75%, 28% 100%, 75% 100%, 0 75%)',
-
-    }}>
-      {/* Custom polygon Shape */}
+    <main className="relative min-h-screen w-full">
       <div 
-        className="static top-0 left-0 right-0 -mb-24 w-full h-[1200px]"
-        style={{
-            // backgroundColor: '#F8C1B7',
-          background: 'url(/airplane.jpg) no-repeat center center',
-        //   backgroundSize: 'cover',
-        //   clipPath: 'polygon(0 0, 100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%)',
-        //   border: '2px solid #000' // Added border to make shape visible
-        }}
-      >
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+        style={{ backgroundImage: 'url(/airplane.jpg)' }}
+      />
+    <section className="relative px-24">
         {/* Content Container */}
         <div className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-12 gap-x-16">
-            {/* Left Content */}
-            <div className="col-span-4">
+          <div className="flex justify-between gap-x-16">
+            {/* Left Content - Now using flex-col */}
+            <div className="w-1/4">
               <div className="flex items-baseline gap-4">
                 <span 
                   className="text-[140px] font-extralight leading-none text-[#E6B5A7]"
@@ -96,7 +57,7 @@ export default function TravelSection() {
                 </h2>
               </div>
               
-              <div className="mt-12">
+              <div className="mt-12 flex flex-col flex-1">
                 <p className="text-gray-600 leading-relaxed">
                   Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -108,7 +69,7 @@ export default function TravelSection() {
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                   when an unknown printer took a gallery of type.
                 </p>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mt-auto">
             <motion.button
                 className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center"
                 whileHover={{ scale: 1.1 }}
@@ -127,8 +88,8 @@ export default function TravelSection() {
               </div>
             </div>
 
-            {/* Right Grid */}
-             <div className="col-span-8 mt-10 grid grid-cols-2 gap-6">
+            {/* Right Grid - Keeping the grid layout */}
+             <div className="w-2/5 mt-10 grid grid-cols-2 gap-6">
                 {travelVideos.map((style, index) => (
                     <div 
                         key={index}
@@ -154,7 +115,8 @@ export default function TravelSection() {
 
           </div>
         </div>
-      </div>
+      
     </section>
+    </main>
   )
 }
