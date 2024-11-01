@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 
 
-
 export default function TravelSection() {
 
     const travelVideos = [
@@ -29,14 +28,14 @@ export default function TravelSection() {
       ]
 
   return (
-    <main className="relative min-h-screen w-full">
+    <main className="relative w-full">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
         style={{ backgroundImage: 'url(/airplane.jpg)' }}
       />
     <section className="relative px-24">
         {/* Content Container */}
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4">
           <div className="flex justify-between gap-x-16">
             {/* Left Content - Now using flex-col */}
             <div className="w-1/4">
@@ -116,6 +115,8 @@ export default function TravelSection() {
           </div>
         </div>
       
+    </section>
+    <section className="relative w-full bg-black">
     </section>
     </main>
   )

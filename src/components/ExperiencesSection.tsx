@@ -64,7 +64,7 @@ export default function ExperiencesSection() {
 
 
   return (
-      <section className="relative min-h-screen bg-white mt-24 px-24" 
+      <section className="relative min-h-screen bg-white mt-48 px-24" 
       style={{ background: 'url(/mountains.jpg) no-repeat center cover',
         backgroundSize: 'cover',
       }}>
@@ -81,7 +81,7 @@ export default function ExperiencesSection() {
         </div> */}
 
         {/* Content - Adjusted max width and padding */}
-        <div className="relative z-10 max-w-[1800px] mx-auto px-8 md:px-20">
+        <div className="relative z-10 mx-auto px-8 md:px-20">
           <div className="grid md:grid-cols-[1.3fr,1fr] gap-24">
             {/* Left Side - Masonry Grid */}
             <div className="h-[800px] -ml-12">
