@@ -57,7 +57,7 @@ export default function FeatureSection() {
               <div className="w-12 h-0.5 bg-orange-500 mb-4" />
 
               {/* Description */}
-              <p className="text-sm text-gray-600 max-w-sm">
+              <p className="text-base text-gray-600 max-w-sm font-semibold">
                 {feature.description}
               </p>
             </div>

@@ -53,7 +53,7 @@ const Testimonials = () => {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“My experience with this travel agency was nothing short of amazing. The attention to detail in planning my trip was impeccable. Every destination, every activity, was carefully curated to match my preferences. I felt like I was on a personalized adventure crafted just for me.”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-semibold font-pj">“My experience with this travel agency was nothing short of amazing. The attention to detail in planning my trip was impeccable. Every destination, every activity, was carefully curated to match my preferences. I felt like I was on a personalized adventure crafted just for me.”</p>
                                 </blockquote>
                             </div>
 
@@ -66,7 +66,7 @@ const Testimonials = () => {
                                    />
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">Leslie Alexander</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Freelance React Developer</p>
+                                    <p className="mt-0.5 text-sm font-pj font-medium text-gray-600">Freelance React Developer</p>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@ const Testimonials = () => {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“As someone who loves off-the-beaten-path experiences, I was thoroughly impressed. They managed to find hidden gems that I wouldn't have discovered on my own. The local guides were knowledgeable and passionate, making each day an exciting new adventure.”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-semibold font-pj">“As someone who loves off-the-beaten-path experiences, I was thoroughly impressed. They managed to find hidden gems that I wouldn't have discovered on my own. The local guides were knowledgeable and passionate, making each day an exciting new adventure.”</p>
                                 </blockquote>
                             </div>
 
@@ -117,7 +117,7 @@ const Testimonials = () => {
                                    />
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">Jacob Jones</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Adventur Seeker</p>
+                                    <p className="mt-0.5 text-sm font-pj font-medium text-gray-600">Adventur Seeker</p>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +155,7 @@ const Testimonials = () => {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“Traveling with kids can be challenging, but this agency made it a breeze. They thought of everything - from kid-friendly activities to accommodations that cater to families. It was a stress-free vacation that both the adults and children enjoyed immensely.”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-semibold font-pj">“Traveling with kids can be challenging, but this agency made it a breeze. They thought of everything - from kid-friendly activities to accommodations that cater to families. It was a stress-free vacation that both the adults and children enjoyed immensely.”</p>
                                 </blockquote>
                             </div>
 
@@ -168,7 +168,7 @@ const Testimonials = () => {
                                    />
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">Jenny Wilson</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Family Traveler</p>
+                                    <p className="mt-0.5 text-sm font-pj font-medium text-gray-600">Family Traveler</p>
                                 </div>
                             </div>
                         </div>

@@ -27,7 +27,7 @@ export default function DestinationsSection() {
         </h2>
         <div className='pt-24 flex flex-col gap-12'>
           <div className="w-16 h-0.5 bg-orange-500"></div>
-          <p className="text-gray-600 max-w-md text-sm leading-relaxed">
+          <p className="text-gray-600 max-w-md text-base font-semibold leading-relaxed">
             Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -45,7 +45,7 @@ export default function DestinationsSection() {
             </motion.button>
 
             {/* Know More Button */}
-            <button className="px-6 py-2 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
+            <button className="px-6 py-2 border rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
               Know More
             </button>
           </div>

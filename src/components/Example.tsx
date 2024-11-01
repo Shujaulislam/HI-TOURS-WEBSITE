@@ -30,7 +30,21 @@ export const Example = () => {
       ]}
     >
       <section className="grid h-screen w-full place-content-center bg-white">
-        <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
+          {/* <span className="text-[160px] font-mono text-black/60 block mb-4 absolute left-[10%]">04.</span> */}
+        <div className="absolute pointer-events-none" style={{ top: '10px', left: '5%' }}>
+          <div className="flex items-center">
+            <span className="text-[160px] font-mono text-[#E6B5A7]">04.</span>
+            <div className="bg-black w-[150px] h-2 mb-24 ml-9 self-end" />
+          </div>
+          <p className="text-[90px] font-mono text-black/70 -mt-12 ml-72" style={{
+            textShadow: '1px 1px 0px rgba(0,0,0,0.15)', 
+            letterSpacing: '0.02em',
+            // fontWeight: '300'
+          }}>
+            Journeys <br/> that <br/> can&apos;t be <br/> <span className="font-extrabold">beat.</span>
+          </p>
+        </div>
+        <p className="flex items-center gap-2 text-5xl font-bold uppercase text-black z-50">
           <FiMousePointer />
           <span>Hover me</span>
         </p>

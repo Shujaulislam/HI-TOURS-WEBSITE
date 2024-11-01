@@ -69,7 +69,7 @@ export default function HeroSection() {
           <div className='w-1/3 pr-10'>
             <div className="w-16 border-white mb-6"></div>
             <h2 className="text-gray-100 text-5xl font-light mb-6">Journeys that can't be beat</h2>
-            <p className="text-gray-100">
+            <p className="text-gray-100 text-base font-medium">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
