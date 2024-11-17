@@ -79,7 +79,7 @@ export default function TravelSection() {
                       </motion.button>
 
                       {/* Know More Button */}
-                      <button className="px-4 sm:px-6 py-2 border border-gray-300 rounded-full text-xs sm:text-sm text-gray-600 hover:bg-gray-50 active:bg-gray-100 transition-colors uppercase tracking-wider">
+                      <button className="px-4 sm:px-6 py-2 border border-gray-300 rounded-full text-xs sm:text-sm text-gray-600 hover:bg-gray-200 active:bg-gray-100 transition-colors uppercase tracking-wider">
                         Know More
                       </button>
                     </div>
