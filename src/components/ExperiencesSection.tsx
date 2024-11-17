@@ -113,29 +113,28 @@ export default function ExperiencesSection() {
                 </p>
               </div>
 
-              <div className="flex items-center pr-[215px] gap-4 flex-row-reverse">
-                {/* Know More Button */}
-                <button className="px-4 sm:px-5 lg:px-6 py-2 border border-gray-300 rounded-full text-xs sm:text-sm text-gray-600 hover:bg-gray-200 active:bg-gray-100 transition-colors uppercase tracking-wider">
-                  Know More
-                </button>
-              <motion.button
-                  className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-orange-500 flex items-center justify-center hover:bg-orange-600 transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <svg 
-                    width="8" 
-                    height="8" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6"
-                  >
-                    <path d="M8 7.5C8 6.67157 8.67157 6 9.5 6H14.5C15.3284 6 16 6.67157 16 7.5V17L11.5 14L7 17V7.5Z" fill="white" />
-                  </svg>
-                </motion.button>
+              <div className="flex items-center gap-4 justify-center lg:justify-start">
+            <motion.button
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full bg-orange-500 flex items-center justify-center hover:bg-orange-600 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6"
+              >
+                <path d="M8 7.5C8 6.67157 8.67157 6 9.5 6H14.5C15.3284 6 16 6.67157 16 7.5V17L11.5 14L7 17V7.5Z" fill="white" />
+              </svg>
+            </motion.button>
 
-              </div>
+            <button className="px-4 sm:px-5 lg:px-6 py-2 border border-gray-300 rounded-full text-xs sm:text-sm text-gray-600 hover:bg-gray-200 active:bg-gray-100 transition-colors uppercase tracking-wider">
+              Know More
+            </button>
+          </div>
             </div>
           </div>
         </div>
