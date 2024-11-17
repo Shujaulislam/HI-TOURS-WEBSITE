@@ -1,7 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
 
-
 export default function TravelSection() {
 
     const travelVideos = [
@@ -28,20 +27,20 @@ export default function TravelSection() {
       ]
 
   return (
-    <main className="relative w-full">
+    <main className="relative w-full mb-24">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full opacity-50 md:opacity-100"
         style={{ backgroundImage: 'url(/airplane.jpg)' }}
       />
-        <section className="relative px-24">
+        <section className="relative px-4 sm:px-8 md:px-16 lg:px-24 py-8 md:py-0">
             {/* Content Container */}
-            <div className="container mx-auto px-4">
-              <div className="flex justify-between gap-x-16">
-                {/* Left Content - Now using flex-col */}
-                <div className="w-1/4">
-                  <div className="flex items-baseline gap-4">
+            <div className="container mx-auto">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-16">
+                {/* Left Content */}
+                <div className="w-full lg:w-1/4 mb-8 lg:mb-0">
+                  <div className="flex items-baseline gap-2 sm:gap-4">
                     <span 
-                      className="text-[140px] font-extralight leading-none text-[#E6B5A7]"
+                      className="text-[80px] sm:text-[100px] md:text-[120px] lg:text-[140px] font-extralight leading-none text-[#E6B5A7]"
                       style={{ 
                         textShadow: '2px 2px 4px rgba(230, 181, 167, 0.3)',
                         fontFamily: 'serif'
@@ -49,15 +48,15 @@ export default function TravelSection() {
                     >
                       03.
                     </span>
-                    <h2 className="text-5xl font-light tracking-wide">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-wide">
                       TRAVEL
                       <br />
                       STYLES
                     </h2>
                   </div>
                   
-                  <div className="mt-12 flex flex-col flex-1">
-                    <p className="text-gray-600 leading-relaxed font-semibold text-base">
+                  <div className="mt-6 lg:mt-12 flex flex-col flex-1">
+                    <p className="text-gray-600 leading-relaxed font-semibold text-sm sm:text-base">
                       Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                       when an unknown printer took a gallery of type.
@@ -68,33 +67,33 @@ export default function TravelSection() {
                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                       when an unknown printer took a gallery of type.
                     </p>
-                    <div className="flex items-center gap-4 mt-auto">
-                <motion.button
-                    className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 7.5C8 6.67157 8.67157 6 9.5 6H14.5C15.3284 6 16 6.67157 16 7.5V17L11.5 14L7 17V7.5Z" fill="white" />
-                    </svg>
-                  </motion.button>
+                    <div className="flex items-center pt-4 pl-6 gap-4 mt-6 lg:mt-auto">
+                      <motion.button
+                        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-orange-500 flex items-center justify-center hover:bg-orange-600 transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-5 sm:h-5">
+                          <path d="M8 7.5C8 6.67157 8.67157 6 9.5 6H14.5C15.3284 6 16 6.67157 16 7.5V17L11.5 14L7 17V7.5Z" fill="white" />
+                        </svg>
+                      </motion.button>
 
-                  {/* Know More Button */}
-                  <button className="px-6 py-2 border border-gray-300 rounded-full text-sm text-gray-600 hover:bg-gray-50 transition-colors uppercase tracking-wider">
-                    Know More
-                  </button>
-                </div>
+                      {/* Know More Button */}
+                      <button className="px-4 sm:px-6 py-2 border border-gray-300 rounded-full text-xs sm:text-sm text-gray-600 hover:bg-gray-50 active:bg-gray-100 transition-colors uppercase tracking-wider">
+                        Know More
+                      </button>
+                    </div>
                   </div>
                 </div>
 
-                {/* Right Grid - Keeping the grid layout */}
-                <div className="w-2/5 mt-10 grid grid-cols-2 gap-6">
+                {/* Right Grid */}
+                <div className="w-full lg:w-2/5 grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mt-4 lg:mt-10">
                     {travelVideos.map((style, index) => (
                         <div 
                             key={index}
-                            className={`relative aspect-[1.2/1] rounded-3xl overflow-hidden shadow-lg 
-                            ${index >= 2 ? 'translate-x-8' : ''}
-                                        `}
+                            className={`relative aspect-[1.2/1] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg 
+                            ${index >= 2 ? 'lg:translate-x-8' : ''}
+                            transform transition-transform hover:scale-[1.02] active:scale-[0.98]`}
                             >
                                 <video
                                     src={style.video}
@@ -102,9 +101,10 @@ export default function TravelSection() {
                                     autoPlay
                                     muted
                                     loop
-                                    playsInline />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                                    <span className="absolute bottom-6 left-6 text-white uppercase text-sm tracking-wide font-medium">
+                                    playsInline 
+                                    preload="metadata" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                    <span className="absolute bottom-3 sm:bottom-4 lg:bottom-6 left-3 sm:left-4 lg:left-6 text-white uppercase text-xs sm:text-sm tracking-wide font-medium">
                                         {style.title}
                                     </span>
                                 </div>

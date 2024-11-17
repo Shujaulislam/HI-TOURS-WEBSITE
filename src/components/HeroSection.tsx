@@ -18,7 +18,9 @@ export default function HeroSection() {
         {/* NavBar with increased padding */}
         <div className="absolute top-0 left-0 right-0 px-16 py-10 flex justify-between items-center">
           <div className="text-2xl">
-            <Image src="/logo.webp" alt="Hi Tours" width={100} height={100} className="h-8" />
+            <Link href="#">
+              <Image src="/logo.webp" alt="Hi Tours" width={100} height={100} />
+            </Link>
           </div>
           <nav className="flex space-x-12 text-sm uppercase tracking-wider font-light">
             <Link className='text-white hover:text-gray-200' href="#about">About Us</Link>
@@ -30,7 +32,7 @@ export default function HeroSection() {
         </div>
 
         {/* Social Media Icons with better positioning */}
-        <div className="absolute left-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 text-white">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 text-white">
           <button onClick={() => {
             useEffect(() => {
               window.open('https://example.com/', '_blank', 'noopener,noreferrer')
@@ -46,7 +48,7 @@ export default function HeroSection() {
               window.open('https://example.com/', '_blank', 'noopener,noreferrer')
             }, [])
           }}><FaInstagram className="w-4 h-4" /></button>
-          <p className="pb-16 text-sm transform -rotate-90">Follow us on</p>
+          <p className="text-sm m-8 transform -rotate-90">Follow us on</p>
         </div>
 
         {/* Hero Content with adjusted spacing */}
